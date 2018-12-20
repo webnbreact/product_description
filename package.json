@@ -1,17 +1,23 @@
 {
-  "name": "",
+  "name": "Airbnb Listing Information",
   "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
+  "description": "Airbnb react application",
+  "author": "Connie Ea",
+  "main": "index.js",
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "dependencies": {
+    "fakegoose": "0.0.3",
+    "faker": "^4.1.0",
+    "mongoose": "^5.4.0",
+    "react": "^16.7.0",
+    "react-dev": "0.0.1"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/preset-react": "^7.0.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "webpack-dev-server": "^3.1.10"
   }
 }
