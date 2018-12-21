@@ -22,7 +22,7 @@ var amenitiesSchema = new mongoose.Schema({
   logistics: String,
   bedBath: String,
   safetyFeatures: String,
-  notIncluded: [String]
+  notIncluded: String
 });
 
 
@@ -30,4 +30,4 @@ var amenitiesSchema = new mongoose.Schema({
 // GET rooms/:roomid/amenities
 
 
-module.exports = mongoose.model(listingSchema, amenitiesSchema)
+module.exports = mongoose.model(listingSchema, amenitiesSchema);
