@@ -8,39 +8,29 @@ var getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max));
 };
 
-var generateForListing = () => {
-  var forListing = [];
+var forListing = [];
+var spaces = ['Entire Place', 'Private Room', 'Hotel Room', 'Shared Room'];
 
-  var space = ['Entire Place', 'Private Room', 'Hotel Room', 'Shared Room'];
+for (var i = 0; i < totalNumber; i++) {
+  forListing.push({
+    homeType: spaces[getRandomInt(4)],
+    placeDescription: faker.lorem.paragraph()
+  });
+}
 
-  for (var i = 0; i < totalNumber; i++) {
-    forListing.push({
-      homeType: space[getRandomInt(4)],
-      placeDescription: faker.lorem.paragraph()
-    });
-  return forListing;
-};
+var forAmenities = [];
 
-var generateForAmenities = () => {
-  var forAmenities = [];
+for (var i = 0; i < totalNumber; i++) {
+  forAmenities.push({
+    basic: faker.lorem.words(),
+    facilities: faker.lorem.words(),
+    dining: faker.lorem.words(),
+    guestAccess: faker.lorem.words(),
+    logistics: faker.lorem.words(),
+    bedBath: faker.lorem.words(),
+    safetyFeatures: faker.lorem.words(),
+    notIncluded: faker.lorem.words()
+  });
+}
 
-  for (var i = 0; i < totalNumber; i++) {
-    forAmenities.push({
-      basic: faker.lorem.words(),
-      facilities: faker.lorem.words(),
-      dining: faker.lorem.words(),
-      guestAccess: faker.lorem.words(),
-      logistics: faker.lorem.words(),
-      bedBath: faker.lorem.words(),
-      safetyFeatures: faker.lorem.words(),
-      notIncluded: faker.lorem.words()
-    });
-  return forAmenities;
-};
-
-// console.log(forAmenities);
-// console.log(forListing);
-
-module.exports = 
- { generateForListing, 
-  generateForAmenities }
+module.exports = {forListing, forAmenities};
