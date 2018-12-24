@@ -13,6 +13,7 @@ var spaces = ['Entire Place', 'Private Room', 'Hotel Room', 'Shared Room'];
 
 for (var i = 0; i < totalNumber; i++) {
   forListing.push({
+    listingId: i,
     homeType: spaces[getRandomInt(4)],
     placeDescription: faker.lorem.paragraph()
   });
