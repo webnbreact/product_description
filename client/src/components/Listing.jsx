@@ -5,16 +5,17 @@ class Listing extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      listingId: 1,
+      id: 1,
       listingInfo: {}
 
     }
   }
+
   componentDidMount() {
     axios
-      .get('http://localhost:1128/listing', {
+      .get('http://localhost:1128/rooms/:id/listing', {
         params: {
-          listingId: this.state.listingId
+          id: this.state.id
         }
       })
       .then(data => {
@@ -23,11 +24,17 @@ class Listing extends React.Component {
           listingInfo: data.data
         })
       })
-      .catch(error => {
+      .catch(err => {
         console.log('axios get failed', err);
       });
   }
-  render()
+  render() {
+    return (
+      <div>
+        hi
+      </div>
+    )
+  }
 }
 
 export default Listing;
