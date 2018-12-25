@@ -23,7 +23,7 @@ db.once('open', function() {
 
 //for house listing
 var listingSchema = new mongoose.Schema({
-  listingId: {type: Number, unique: true},
+  id: {type: Number, unique: true},
   homeType: String,
   placeDescription: String
 });
@@ -32,7 +32,7 @@ let Listings = mongoose.model('Listings', listingSchema);
 
 var listingDescription = faker.forListing.map(key => {
   return {
-    listingId: key.listingId,
+    id: key.id,
     homeType: key.homeType,
     placeDescription: key.placeDescription
   };
