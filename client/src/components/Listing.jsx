@@ -28,8 +28,7 @@ class Listing extends React.Component {
   render() {
     return (
       <div>
-        {/* {this.state.listingInfo} */}
-        hi
+        {this.state.listingInfo.homeType}
       </div>
     )
   }
