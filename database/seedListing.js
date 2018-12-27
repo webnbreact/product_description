@@ -1,13 +1,14 @@
 const faker = require ('./faker.js');
 const mongoose = require ('mongoose');
-// mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost:27017/airbnb', {
+const URI = 'mongodb://localhost:27017/airbnb';
+const connection = mongoose.connect(URI, {
   useCreateIndex: true,
   useNewUrlParser: true,
-  // autoIndex: true
+  autoIndex: true
 })
+
 const db = mongoose.connection;
-// mongoose.connect('mongodb://localhost:27017/airbnb', { useNewUrlParser: true });
+
 db.dropCollection('listings', (err, results) => {
   if (err) {
     console.log(err);
@@ -51,3 +52,4 @@ let saveListings = (listingDescription) => {
 saveListings(listingDescription);
 
 module.exports = {Listings};
+module.exports.connection = connection;

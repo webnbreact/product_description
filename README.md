@@ -1,13 +1,13 @@
 # Project Name
 
-> Project description
+> weBNB
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/webnbreact/product_description
+  - https://github.com/webnbreact/carousel
+  - https://github.com/webnbreact/checkout
+  - https://github.com/webnbreact/reviews_module
 
 ## Table of Contents
 
