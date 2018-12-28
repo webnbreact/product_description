@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from "axios";
 
 class Listing extends React.Component {
   constructor(props) {
@@ -12,26 +11,24 @@ class Listing extends React.Component {
   }
 
   componentDidMount() {
-    axios
-      .get('http://localhost:1128/rooms/:id/listing', {
-        params: {
-          id: this.state.id
-        }
+    fetch(`/rooms/${this.state.id}/listings`)
+      .then(response =>
+        response.json()
+      )
+      .then((result) => {
+        this.setState({listingInfo: result})
       })
-      .then(data => {
-        console.log('this is data', data.data);
-        this.setState({
-          listingInfo: data.data
-        })
+      .then(myJson => {
+        console.log(`this is myJSON`, this.state.listingInfo)
       })
-      .catch(err => {
-        console.log('axios get failed', err);
-      });
+      .catch(error => {
+        console.log('fetch error', error)
+      })
   }
   render() {
     return (
       <div>
-        hi
+        {this.state.listingInfo.homeType}
       </div>
     )
   }

@@ -2,19 +2,19 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+const path = require('path');
 const port = process.env.PORT || 3003;
 
 const {Listings} = require('../database/seedListing.js');
 // const {Amenities} = require('../database/seedDB.js');
 
-// const db = require('../database/seedDB.js');
-
+app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 
-app.use(express.static(__dirname + '/../client/dist'));
-
+app.use(express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/rooms/:id/listings', (req, res) => {
   // console.log(`this is req.params`, req.params.id);
