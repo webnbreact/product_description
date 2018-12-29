@@ -1,3 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Listing Test shallow renders without crashing 1`] = `
+<div>
+  <div>
+    <div>
+      <ul />
+      <ul />
+      <ul />
+      <ul />
+      <button
+        onClick={[Function]}
+      >
+        Read more about the space
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Listing Test should render 1`] = `<div />`;

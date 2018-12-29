@@ -26,7 +26,9 @@ db.once('open', function() {
 var listingSchema = new mongoose.Schema({
   id: {type: Number, unique: true},
   homeType: String,
-  placeDescription: String
+  homeName: String,
+  homeLocation: String,
+  homeDescription: String
 });
 
 let Listings = mongoose.model('Listings', listingSchema);
@@ -35,7 +37,9 @@ var listingDescription = faker.forListing.map(key => {
   return {
     id: key.id,
     homeType: key.homeType,
-    placeDescription: key.placeDescription
+    homeName: key.homeName,
+    homeLocation: key.homeLocation,
+    homeDescription: key.homeDescription
   };
 });
 

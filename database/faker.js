@@ -15,7 +15,9 @@ for (var i = 0; i < totalNumber; i++) {
   forListing.push({
     id: i,
     homeType: spaces[getRandomInt(4)],
-    placeDescription: faker.lorem.paragraph()
+    homeName: faker.lorem.words(),
+    homeLocation: faker.lorem.word(),
+    homeDescription: faker.lorem.paragraph(getRandomInt(25))
   });
 }
 
@@ -23,6 +25,7 @@ var forAmenities = [];
 
 for (var i = 0; i < totalNumber; i++) {
   forAmenities.push({
+    id: i,
     basic: faker.lorem.words(),
     facilities: faker.lorem.words(),
     dining: faker.lorem.words(),
