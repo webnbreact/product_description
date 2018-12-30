@@ -47,13 +47,13 @@ class Listing extends React.Component {
     return (    
       <div className={styles.containerDiv}>
         <div className={styles.listingInfo}>
-          <ul>{this.state.listingInfo.homeType}</ul>
-          <ul>{this.state.listingInfo.homeName}</ul>
-          <ul>{this.state.listingInfo.homeLocation}</ul>
+          <ul className={styles.home_type}>{this.state.listingInfo.homeType}</ul>
+          <ul className={styles.home_name}>{this.state.listingInfo.homeName}</ul>
+          <ul className={styles.home_location}>{this.state.listingInfo.homeLocation}</ul>
           <ul>{this.state.listingInfo.homeDescription}</ul>
           <ul>{this.renderMoreDescription()}</ul>
-          <button onClick={this.showMore}>
-          {this.state.isExpanded ? 'Show less' : 'Read more about listing'}</button>
+          <ul className={styles.button} onClick={this.showMore}>
+          {this.state.isExpanded ? 'Hide' : 'Read more about the space'}</ul>
         </div>
       </div>
     )
