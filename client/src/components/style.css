@@ -1,5 +1,14 @@
 .containerDiv {
+  color: #303030;
   display: flex;
-  background-color: blue;
+  font-family: 'Montserrat', sans-serif;
 }
 
+.read-more {
+  height: auto;
+}
+
+.read-less {
+  height: 15px;
+  overflow: hidden;
+}

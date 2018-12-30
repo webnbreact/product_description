@@ -7,8 +7,10 @@ class Listing extends React.Component {
     this.state = {
       id: 1,
       listingInfo: {},
+      isExpanded: false
     }
     this.showMore = this.showMore.bind(this)
+    this.renderMoreDescription = this.renderMoreDescription.bind(this)
   }
 
   componentDidMount() {
@@ -20,7 +22,7 @@ class Listing extends React.Component {
         this.setState({listingInfo: result})
       })
       .then(myJson => {
-        console.log(`this is myJSON`, this.state.listingInfo)
+        console.log(`this is myJSON`, myJson, this.state.listingInfo)
       })
       .catch(error => {
         console.log('fetch error', error)
@@ -28,23 +30,32 @@ class Listing extends React.Component {
   }
 
   showMore() {
-    console.log('clicked')
-  
+    this.setState({
+      isExpanded: !this.state.isExpanded,
+    })
+  }
+
+  renderMoreDescription() {
+    if (this.state.isExpanded) {
+      return this.state.listingInfo.homeDescriptionMore
+    } else {
+      return;
+    }
   }
 
   render() {
     return (    
       <div className={styles.containerDiv}>
         <div className={styles.listingInfo}>
-          <div>
-            <ul>{this.state.listingInfo.homeType}</ul>
-            <ul>{this.state.listingInfo.homeName}</ul>
-            <ul>{this.state.listingInfo.homeLocation}</ul>
-            <ul>{this.state.listingInfo.homeDescription}</ul>
-            <button onClick={this.showMore}>Read more about the space</button>
-          </div>
+          <ul>{this.state.listingInfo.homeType}</ul>
+          <ul>{this.state.listingInfo.homeName}</ul>
+          <ul>{this.state.listingInfo.homeLocation}</ul>
+          <ul>{this.state.listingInfo.homeDescription}</ul>
+          <ul>{this.renderMoreDescription()}</ul>
+          <button onClick={this.showMore}>
+          {this.state.isExpanded ? 'Show less' : 'Read more about listing'}</button>
         </div>
-        </div>
+      </div>
     )
   }
 }

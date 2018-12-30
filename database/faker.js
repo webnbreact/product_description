@@ -17,7 +17,8 @@ for (var i = 0; i < totalNumber; i++) {
     homeType: spaces[getRandomInt(4)],
     homeName: faker.lorem.words(),
     homeLocation: faker.lorem.word(),
-    homeDescription: faker.lorem.paragraph(getRandomInt(25))
+    homeDescription: faker.lorem.paragraph(getRandomInt(7)),
+    homeDescriptionMore: faker.lorem.paragraph(getRandomInt(10))
   });
 }
 

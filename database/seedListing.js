@@ -28,7 +28,8 @@ var listingSchema = new mongoose.Schema({
   homeType: String,
   homeName: String,
   homeLocation: String,
-  homeDescription: String
+  homeDescription: String,
+  homeDescriptionMore: String
 });
 
 let Listings = mongoose.model('Listings', listingSchema);
@@ -39,7 +40,8 @@ var listingDescription = faker.forListing.map(key => {
     homeType: key.homeType,
     homeName: key.homeName,
     homeLocation: key.homeLocation,
-    homeDescription: key.homeDescription
+    homeDescription: key.homeDescription,
+    homeDescriptionMore: key.homeDescriptionMore
   };
 });
 
