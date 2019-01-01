@@ -1,6 +1,27 @@
+.button {
+  color: #199094;
+  font-weight: bold;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* 
+.containerDiv {
+  color:#585a3a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0 17%;
+  max-width: 510px;
+} */
+
+
 .row1 {
   display: flex;
   flex-direction:row;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .row2 {

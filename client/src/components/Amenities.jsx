@@ -8,7 +8,7 @@ class Amenities extends React.Component {
     this.state = {
       showPopup: false
     };
-    this.togglePopup = this.togglePopup.bind(this)
+    this.togglePopup = this.togglePopup.bind(this);
   }
   togglePopup() {
     this.setState({
@@ -18,10 +18,12 @@ class Amenities extends React.Component {
   render() {
     return (
       <div className={styles.containerDiv}>
-        <h1>Amenities</h1>
+        <div>Amenities</div>
         <div className={styles.row1}>
-          <span className="fas fa-utensils" /> 
-          <span>Kitchen</span>
+          <li className={styles.kitchen}>
+            <span className="fas fa-utensils" /> 
+            <span>Kitchen</span>
+          </li>
           <span className="fas fa-wifi" />
           <span>Wifi</span>
         </div>
@@ -32,16 +34,11 @@ class Amenities extends React.Component {
           <span>Fire Extinguisher</span>
         </div>
         <div>
+        {this.state.showPopup ? 
+          <Popup closePopup={this.togglePopup}/> : null}
         <ul className={styles.button} onClick={this.togglePopup}>
           {this.state.isExpanded ? 'Hide' : 'Show more amenities'}
         </ul> 
-        {this.state.showPopup ? 
-          <Popup
-          text='Close Me'
-          closePopup={this.togglePopup.bind(this)}
-          />
-          : null
-        }
         </div>
       </div>
     );

@@ -10,9 +10,29 @@
 
 .containerDiv {
   color:#585a3a;
+  line-height: 22px;
   font-family: 'Montserrat', sans-serif;
-  margin: 0 17%;
+  margin: 0 15%;
   max-width: 510px;
+}
+
+.host_image {
+  text-align: center;
+  height: 64px;
+  width: 64px;
+  margin-left: 40px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  border: 1x solid grey;
+  padding:0px;
+  overflow: hidden;
+}
+
+.host_image img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .home_location {
