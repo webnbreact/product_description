@@ -1,0 +1,63 @@
+.button {
+  color: #199094;
+  font-weight: bold;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.containerDiv {
+  color:#585a3a;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 15%;
+  max-width: 510px;
+}
+
+.host_image {
+  text-align: center;
+  height: 64px;
+  width: 64px;
+  margin-left: 40px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  border: 1x solid grey;
+  padding:0px;
+  overflow: hidden;
+}
+
+.host_image img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.home_location {
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: #484848;
+}
+
+.home_name {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.125em;
+  color: #484848;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.home_type {
+  box-sizing: border-box;
+  font-weight: 800;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.3333333333333333em;
+  text-transform: uppercase;
+} 

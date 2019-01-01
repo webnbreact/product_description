@@ -14,8 +14,12 @@ var spaces = ['Entire Place', 'Private Room', 'Hotel Room', 'Shared Room'];
 for (var i = 0; i < totalNumber; i++) {
   forListing.push({
     id: i,
+    hostImage: faker.image.avatar(),
     homeType: spaces[getRandomInt(4)],
-    placeDescription: faker.lorem.paragraph()
+    homeName: faker.lorem.words(),
+    homeLocation: faker.lorem.word(),
+    homeDescription: faker.lorem.paragraph(getRandomInt(7)),
+    homeDescriptionMore: faker.lorem.paragraph(getRandomInt(10))
   });
 }
 
@@ -23,6 +27,7 @@ var forAmenities = [];
 
 for (var i = 0; i < totalNumber; i++) {
   forAmenities.push({
+    id: i,
     basic: faker.lorem.words(),
     facilities: faker.lorem.words(),
     dining: faker.lorem.words(),
