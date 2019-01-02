@@ -37,7 +37,7 @@ class Amenities extends React.Component {
         {this.state.showPopup ? 
           <Popup closePopup={this.togglePopup}/> : null}
         <ul className={styles.button} onClick={this.togglePopup}>
-          {this.state.isExpanded ? 'Hide' : 'Show more amenities'}
+          {this.state.showPopup ? 'Hide' : 'Show more amenities'}
         </ul> 
         </div>
       </div>

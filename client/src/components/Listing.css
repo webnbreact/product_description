@@ -8,18 +8,42 @@
   text-decoration: underline;
 }
 
-.containerDiv {
+/* .containerDiv {
   color:#585a3a;
   line-height: 22px;
   font-family: 'Montserrat', sans-serif;
   margin: 0 15%;
   max-width: 510px;
+} */
+
+.containerDiv {
+  /* display: flex; */
+  margin: 0 17%;
+  max-width: 510px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-weight: normal;
 }
 
-.host_image {
+.hostInfo {
+  flex: 2;
+}
+
+.headerListing {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.hostImage {
   text-align: center;
   height: 64px;
   width: 64px;
+  vertical-align: middle;
+  overflow: hidden;
   margin-left: 40px;
   display: inline-block;
   background-color: white;
@@ -29,13 +53,13 @@
   overflow: hidden;
 }
 
-.host_image img {
+.hostImage img {
   height: 100%;
   max-width: 100%;
   object-fit: cover;
 }
 
-.home_location {
+.homeLocation {
   margin: 0px;
   word-wrap: break-word;
   font-size: 16px;
@@ -44,7 +68,7 @@
   color: #484848;
 }
 
-.home_name {
+.homeName {
   font-size: 32px;
   font-weight: 800;
   line-height: 1.125em;
@@ -53,7 +77,7 @@
   padding-bottom: 6px;
 }
 
-.home_type {
+.homeType {
   box-sizing: border-box;
   font-weight: 800;
   font-size: 12px;

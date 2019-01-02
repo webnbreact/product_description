@@ -48,12 +48,18 @@ class Listing extends React.Component {
   render() {
     return (    
       <div className={styles.containerDiv}>
-        <div className={styles.host_image}>
-          <img src={this.state.listingInfo.hostImage} />
+      <div className={styles.hostInfo}>
+        {/* <div> */}
+          {/* <div> */}
+          <div class="headerListing">
+            <h1 className={styles.homeType}>{this.state.listingInfo.homeType}</h1>
+            <ul className={styles.homeName}>{this.state.listingInfo.homeName}</ul>
+            <ul className={styles.homeLocation}>{this.state.listingInfo.homeLocation}</ul>
+            <div className={styles.hostImage}>
+            <img src={this.state.listingInfo.hostImage} />
+          </div>
         </div>
-        <ul className={styles.home_type}>{this.state.listingInfo.homeType}</ul>
-        <ul className={styles.home_name}>{this.state.listingInfo.homeName}</ul>
-        <ul className={styles.home_location}>{this.state.listingInfo.homeLocation}</ul>
+      </div>
         <hr />
         <ul>{this.state.listingInfo.homeDescription}</ul>
         <ul>{this.renderMoreDescription()}</ul>

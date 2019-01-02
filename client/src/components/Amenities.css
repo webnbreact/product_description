@@ -16,6 +16,9 @@
   max-width: 510px;
 } */
 
+li {
+  list-style-type: none;
+}
 
 .row1 {
   display: flex;
