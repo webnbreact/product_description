@@ -1,6 +1,8 @@
 .button {
   color: #199094;
   font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 8px;
 }
 
 .button:hover {
@@ -8,56 +10,119 @@
   text-decoration: underline;
 }
 
-.containerDiv {
-  color:#585a3a;
-  line-height: 22px;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0 15%;
+.listingInfo {
+  display: flex;
+  flex-direction: row;
+  margin: 0 17%;
   max-width: 510px;
+  font-family: 'Montserrat', sans-serif;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
-.host_image {
+.listingHeader {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.hostImage {
   text-align: center;
   height: 64px;
   width: 64px;
+  vertical-align: middle;
+  overflow: hidden;
   margin-left: 40px;
   display: inline-block;
   background-color: white;
   border-radius: 50%;
   border: 1x solid grey;
-  padding:0px;
+  padding: 0px;
   overflow: hidden;
+  margin-left: 40px;
+  display: inline-block;
+
 }
 
-.host_image img {
+.hostImage img {
   height: 100%;
   max-width: 100%;
   object-fit: cover;
 }
 
-.home_location {
+.homeLocation {
   margin: 0px;
   word-wrap: break-word;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.375em;
   color: #484848;
+  -webkit-font-smoothing: antialiased;
 }
 
-.home_name {
+.homeName {
   font-size: 32px;
   font-weight: 800;
   line-height: 1.125em;
   color: #484848;
   padding-top: 6px;
   padding-bottom: 6px;
+  margin: 1px;
+  -webkit-font-smoothing: antialiased;
 }
 
-.home_type {
+.homeType {
   box-sizing: border-box;
   font-weight: 800;
   font-size: 12px;
   font-weight: bold;
   line-height: 1.3333333333333333em;
   text-transform: uppercase;
+  margin: 2px;
+  -webkit-font-smoothing: antialiased;
 } 
+
+.type {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.guest {
+  color: #484848;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+hr {
+  width: 37%;
+  margin: 0 15%;
+}
+
+.moreInfo {
+  box-sizing: border-box;
+  margin: 0 17%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 510px;
+  color: #484848;
+  font-family: 'Montserrat', sans-serif;
+  word-wrap: break-word;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Modal.css';
+import Amenities from './Amenities.jsx';
 
 class Popup extends React.Component {
   render() {
