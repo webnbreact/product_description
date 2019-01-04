@@ -1,40 +1,68 @@
 .button {
   color: #199094;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  margin: 0 14%;
+  margin-top: 10px;
+  max-width: 510px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .button:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-/* 
-.containerDiv {
-  color:#585a3a;
+
+.title {
+  margin-top: 20px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+.amenitiesInfo {
   margin: 0 17%;
   max-width: 510px;
-} */
+  color: #484848;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
 
 li {
   list-style-type: none;
 }
 
+span {
+  display: inline-block;
+  color: #484848;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* .container {
+  display: flex;
+} */
+
 .row1 {
   display: flex;
-  flex-direction:row;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
+  flex-direction: row;
+  /* justify-content: flex-start;  */
+} 
 
 .row2 {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
+  /* justify-content: flex-end; */
 }
 
-.fa-utensils {
+/* .fa-utensils {
   padding-bottom: 3px;
   padding-right: 4px;
   font-size: 12px;
   vertical-align: middle;
-}
+} */

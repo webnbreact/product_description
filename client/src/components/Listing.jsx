@@ -44,31 +44,36 @@ class Listing extends React.Component {
       return;
     }
   }
-
   render() {
-    return (    
-      <div className={styles.containerDiv}>
-      <div className={styles.hostInfo}>
-        {/* <div> */}
-          {/* <div> */}
-          <div class="headerListing">
-            <h1 className={styles.homeType}>{this.state.listingInfo.homeType}</h1>
-            <ul className={styles.homeName}>{this.state.listingInfo.homeName}</ul>
-            <ul className={styles.homeLocation}>{this.state.listingInfo.homeLocation}</ul>
-            <div className={styles.hostImage}>
-            <img src={this.state.listingInfo.hostImage} />
+    return (
+      <div className={styles.outerContainer}>
+      <div className={styles.listingInfo}>
+        <div>
+          <div>
+            <div class="listingHeader">
+              <li className={styles.homeType}>{this.state.listingInfo.homeType}</li>
+              <li className={styles.homeName}>{this.state.listingInfo.homeName}</li>
+              <li className={styles.homeLocation}>{this.state.listingInfo.homeLocation}</li>
+            </div>
+            <li className={styles.guest}>
+              <star class="fas fa-male" /> 4 Guests  2 bedrooms  2 beds  2 baths
+            </li>
           </div>
         </div>
+        <div className={styles.hostImage}>
+        <img src={this.state.listingInfo.hostImage} />
       </div>
-        <hr />
-        <ul>{this.state.listingInfo.homeDescription}</ul>
-        <ul>{this.renderMoreDescription()}</ul>
-        <ul className={styles.button} onClick={this.showMore}>
-        {this.state.isExpanded ? 'Hide' : 'Read more about the space'}</ul> 
-        <ul className={styles.button}>Contact host</ul>
-        <hr />
-        <Amenities />
-        <hr />
+      </div>
+      <hr />
+      <div className={styles.moreInfo}>
+        <li>{this.state.listingInfo.homeDescription}</li>
+        <li>{this.renderMoreDescription()}</li>
+        <li className={styles.button} onClick={this.showMore}>
+        {this.state.isExpanded ? 'Hide' : 'Read more about the space'}</li>
+        <li className={styles.button}>Contact host</li>
+      </div>
+      <hr />
+      <Amenities />
       </div>
     )
   }
